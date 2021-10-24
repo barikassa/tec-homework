@@ -158,58 +158,21 @@ const aoutoProg = process.argv[3];
 const pageProg = process.argv[4];
 
 
-const existObj = [
+let existObj = [
     { name: 'dani', author: 'jacksone', page: 400 },
     { name: 'ezra', author: 'nabop', page: 600 },
     { name: 'tari', author: 'loooo', page: 600 }
 ]
-const newObj = { name: nameProg, author: aoutoProg, page: pageProg }
 
 
-function returnBook(){
-    for (let i = 0; i < existObj.length; i++) {
-        if (existObj[i].name === nameProg) {
-            console.log(existObj[i].name);
-            console.log("eror");
-        }
-    }
-    const newLibrary = JSON.stringify(existObj.push(newObj));
+let newObj = { name: nameProg, author: aoutoProg, page: pageProg };
 
-}
+ 
+let check = existObj.find(element => element.name == newObj.name);
+if (check == undefined) {
+    existObj.push(newObj)}
+console.log(existObj);
 
-
-
-    fs.writeFileSync(bookT, newLibrary)
-    console.log("ooooo");
-
-returnBook()
-
-
-
-
-
-
-
-
-
-
-// const fs = require('fs');
-// const bookObj = 'library.txt'
-// const nameProg = process.argv[2];
-// const autorProg = process.argv[3];
-// const pageProg = process.argv[4];
-
-// const booksObjD = [
-//     { name: 'dani safaire', author: 'the wondeLand', pages: 500 },
-//     { name: 'laru kamacasi', author: 'save your time', pages: 900 },
-//     { name: 'don panju', author: 'be cool', pages: 200 }
-// ]
-
-// const comandLineObj = { name: nameProg, author: autorProg, pages: pageProg }
-// // let newBook = booksObjD.push(comandLineObj);
-// // let newBookJason = JSON.stringify(newBook);
-
-// fs.writeFileSync(bookObj, comandLineObj)
 
 
 
