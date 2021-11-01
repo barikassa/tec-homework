@@ -1,0 +1,60 @@
+GET http://localhost:8080/todos 
+
+###
+POST http://localhost:8080/todos 
+Content-Type: application/json
+
+{
+    "userId":11,
+    "id":11,
+    "title":"tttt1",
+    "complited":false
+
+}
+
+###
+PATCH http://localhost:8080/todos/617fb8c3207cd256de459b8a
+Content-Type: application/json
+
+{
+    "userId":111111,
+    "id":11111111,
+    "title":"bbbbb4444444444",
+    "complited":false
+
+}
+ 
+###
+DELETE http://localhost:8080/todos/617fb8c3207cd256de459b8a
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
