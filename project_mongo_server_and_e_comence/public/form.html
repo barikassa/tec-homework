@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+      /* nav */
+      .navbar {
+        background-color: #050505;
+        display: flex;
+        align-items: center;
+      }
+
+      .navbar a {
+        color: #e7e7e7;
+      }
+
+      .navbar ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+      }
+
+      .navbar .brand {
+        display: block;
+        color: #e7e7e7;
+        padding: 24px;
+        font-size: 24px;
+      }
+
+      .navbar ul li a {
+        color: #e7e7e7;
+        padding: 24px;
+        display: block;
+      }
+
+      .navbar ul a:hover,
+      .navbar ul a:focus,
+      .navbar ul .active {
+        background-color: #272727;
+      }
+
+      /* responsive */
+      @media (max-width: 798px) {
+        .navbar {
+          height: 100px;
+        }
+        .navbar .brand {
+          padding: 0px;
+          font-size: 16px;
+        }
+        .navbar ul {
+          width: 50%;
+          margin-right: 62px;
+          height: 15px;
+        }
+        .navbar ul li {
+          padding: 0px;
+          width: 35px;
+          font-size: 8px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar">
+        <a class="brand" href="./index.html">BARIWATCHES</a>
+        <ul>
+          <li>
+            <a class="active" href="./patekPhillip.html">PATEK PHILLLIP</a>
+          </li>
+          <li>
+            <a href="./rolex.html">ROLEX</a>
+          </li>
+          <li>
+            <a href="./mad-paris.html">MAD PARIS</a>
+          </li>
+          <li>
+            <a href="./louis-moinet.html">LOUIS MOINET</a>
+          </li>
+          <li>
+            <a href="https://www.hodinkee.com/magazine">MAGAZINE</a>
+          </li>
+          <li>
+            <a href="./cart.html" style="color: aqua">buy</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="container">
+      <h2>Client form</h2>
+      <form id="form">
+        <div class="form-group">
+          <label for="text">Full name:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            placeholder="Enter fullname"
+            name="fullname"
+          />
+        </div>
+        <div class="form-group">
+          <label for="number">Phone number:</label>
+          <input
+            type="number"
+            class="form-control"
+            id="phoneNumber"
+            placeholder="Enter fullname"
+            name="phone number"
+          />
+        </div>
+        <div class="form-group">
+          <label for="email">email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            placeholder="Enter Email"
+            name="email"
+          />
+        </div>
+
+        <div class="checkbox">
+          <label
+            ><input type="checkbox" name="remember" /> I am not a robot</label
+          >
+        </div>
+        <button id="btn" type="submit" class="btn btn-default">Submit</button>
+      </form>
+    </div>
+
+  <div id="div"></div>
+
+    <div id="divid">
+      <img
+        src="../Images/patek-phillip 1/2PERPETUAL CALENDAR 5327R.jpg"
+        alt=""
+      />
+      <img
+        src="../Images/patek-phillip 1/3 PERPETUAL CALANDER 5327G.jpg"
+        alt=""
+      />
+      <img
+        src="../Images/patek-phillip 1/5 LADIES FIRST PERPETUAL CALENDAR 7140G.jpg"
+        alt=""
+      />
+      <img
+        src="../Images/patek-phillip 1/7 CHRONOGRAPH, PERPETUAL CALENDAR 5270P.jpg"
+        alt=""
+      />
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <script>
+      const form = document.getElementById("form");
+      form.addEventListener("submit", sendClientData);
+    
+      function sendClientData(e) {
+        e.preventDefault();
+      const fullName = document.getElementById("name").value;
+      const phoneNumber = document.getElementById("phoneNumber").value;
+      const email = document.getElementById("email").value;
+        axios
+          .post("/contact", {
+            fullName: fullName,
+            phoneNumber: phoneNumber,
+            email: email,
+          })
+          .then((Response) => {
+            console.log(Response);
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+      }
+    </script>
+  </body>
+</html>

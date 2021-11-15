@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="./css/main.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BariWATCHES</title>
+</head>
+
+<body>
+    <section class="showcase"> 
+        <header>
+            <h2 class="logo">BariWATCHES</h2>
+            <div class="toggle"></div>
+        </header>
+
+        <video id="video" src="./Images/videos/patek newnew.mp4" muted loop autoplay ></video>
+        
+
+        <div class="overlay"></div>
+
+        <div class="text">
+            <h2>Round the Clock</h2>
+            <h3>Timeless watches by far</h3>
+            <p>BARIWATCHES are 
+                crafted with scruoulous attention to detail.
+                Explore the collection of prestigious, high-precision timepieces.</p>
+            <a id="explore" href="#">Explore</a>
+        </div>
+
+        <ul class="social">
+            <li> <a href="https://www.instagram.com/rolex/?hl=en"><img src="./Images/icons/insta.png" alt=""></a></li>
+            <li><a href="https://www.youtube.com/watch?v=uealGl4vs7Q"><img src="./Images/icons/yt.png" alt=""></a></li>
+            <li><a href="https://twitter.com/?lang=en"><img src="./Images/icons/twitter.png" alt=""></a></li>
+            <li><a href="https://mail.google.com/mail/u/0/#inbox"><img src="./Images/icons/gmail.png" alt=""></a></li>
+        </ul>
+    </section>
+
+    <div class="menu" > 
+        <ul>   
+            <li><a href="/patekPhillip.html">patek-philippe</a></li>
+            <li><a href="/rolex.html">rolex</a></li>
+            <li><a href="/mad-paris.html">mad paris</a></li>
+            <li><a href="/louis-moinet.html">louis moinet</a></li>
+            <li><a href="https://www.hodinkee.com/magazine">magazine</a></li>
+            <li><a href="/form.html">subscribe</a></li>
+            <li><a href="/cart.html">cart</a></li> 
+            <li><a href="./addProducts.html">Add Products</a></li> 
+            <li><a href="./updateProduct.html">Update Product</a></li> 
+            <li><a href="./delete.html">delete Product</a></li> 
+
+
+
+            
+             
+        </ul>
+        
+    </div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    <script >
+let menuToggle=document.getElementsByClassName("toggle")[0];
+let showcase=document.getElementsByClassName("showcase")[0];
+let menu=document.getElementsByClassName("menu")[0];
+menuToggle.onclick=function(){
+    menuToggle.classList.toggle('active');
+    showcase.classList.toggle('active');
+    menu.style.visibility="visible"
+
+}
+
+let explore=document.getElementById("explore");
+explore.onclick=function(){
+explore.classList.toggle('active');
+showcase.classList.toggle('active');
+    menu.style.visibility="visible"
+};
+
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>

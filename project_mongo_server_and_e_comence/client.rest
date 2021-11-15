@@ -1,0 +1,43 @@
+GET http://localhost:8080/products
+
+### 
+
+POST  http://localhost:8080/products
+Content-Type: application/json
+
+
+[{"id": 666666666,
+ "name":"dasterrrr", 
+ "price":500000000000, 
+ "discription": "i have beeeen here",
+  "img": ["../images/rolex/1  datejust  .webp", "../images/rolex/1  datejust  .webp"]}] 
+
+### 
+
+PATCH  http://localhost:8080/products/618bf2048bf7be7255c7856e
+Content-Type: application/json
+
+
+
+       {"id": 101,
+        "name":"mama", 
+        "price":44444444444, 
+        "discription": "its already updateddddddddddddd",
+         "img": ["../images/rolex/1  datejust  .webp", "../images/rolex/1  datejust  .webp"]}
+
+
+###
+
+DELETE http://localhost:8080/products/618bff468bf7be7255c7856f
+
+
+###
+
+
+
+
+
+
+
+
+
