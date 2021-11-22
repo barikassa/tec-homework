@@ -7,7 +7,7 @@ class Img extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div className='pic'>
         <li>
           <img src={this.props.image.img1} />
         </li>

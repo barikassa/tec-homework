@@ -25,7 +25,7 @@ class Maincake extends React.Component {
       <div > 
         <Logo logo={logoObj} />
         <Title title={titleObj}/>
-       <div className="text" > <Text text={textObj}/></div>
+       <div className="text"> <Text text={textObj}/></div>
       </div>
     );
   }
