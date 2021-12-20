@@ -43,7 +43,7 @@ const Vaction = () => {
     });
     setActivBtn(true);
     setActive(activeVacation);
-    console.log("falsesssssssssss", activeVacation);
+    console.log("active", activeVacation);
   };
 
   const colorHandler = (i) => {
